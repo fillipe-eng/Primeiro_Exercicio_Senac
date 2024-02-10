@@ -115,3 +115,13 @@ FROM
     Livros
 WHERE
 	PRECO > (select AVG(Preco) from Livros );
+
+
+-- 11) Quais são os autores que têm livros publicados em maios de uma editora
+SELECT 
+    Nome_Autor, 
+    COUNT(DISTINCT Editora) AS total_editoras
+FROM
+    Livros
+GROUP BY Nome_Autor
+HAVING COUNT(DISTINCT Editora) > 1;
