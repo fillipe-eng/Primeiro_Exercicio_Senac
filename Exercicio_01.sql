@@ -1,4 +1,5 @@
 CREATE DATABASE Livraria;
+USE Livraria;
 
 CREATE TABLE Livros(
 		Nome_Livro VARCHAR(100) NOT NULL,
